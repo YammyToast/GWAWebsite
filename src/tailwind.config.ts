@@ -10,7 +10,10 @@ export default {
         DEFAULT: '#FF4D6D',
         hover: '#CC1A3A'
       },
-      'background': '#1A1A1A',
+      'background': {
+        DEFAULT: '#141414',
+        alt: '#111111'
+      },
       'text': '#f5f5f5',
       'accent-1': '#333333',
       'accent-2': '#BDBDBD'
