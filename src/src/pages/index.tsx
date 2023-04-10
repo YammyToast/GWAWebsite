@@ -6,6 +6,7 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { api } from "~/utils/api";
 
 import Navigation from './components/navigation'
+import IndexContent from "./components/indexContent";
 
 const Home: NextPage = () => {
   //const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -17,12 +18,13 @@ const Home: NextPage = () => {
         <meta name="description" content="Musecal App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navigation></Navigation>
-      <main>
-        <h1>
-          Content
-        </h1>
-      </main>
+      <div className="overflow-x-hidden">
+        <Navigation></Navigation>
+        <main>
+          <IndexContent></IndexContent>
+        </main>
+
+      </div>
     </>
   );
 };

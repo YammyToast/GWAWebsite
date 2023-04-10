@@ -15,7 +15,7 @@ export default {
         alt: '#111111'
       },
       'text': '#f5f5f5',
-      'accent-1': '#333333',
+      'accent-1': '#1C1C1C',
       'accent-2': '#BDBDBD'
     },
     fontFamily: {
@@ -23,7 +23,7 @@ export default {
     },
     extend: {
       gridTemplateColumns: {
-        'navigation': '20% 15% 1fr 20%' 
+        'navigation': '10% 15% 1fr 20%' 
       }
     }
   },
