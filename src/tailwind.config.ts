@@ -20,7 +20,11 @@ export default {
     },
     fontFamily: {
       'maven': ['Maven Pro', 'sans-serif']
-
+    },
+    extend: {
+      gridTemplateColumns: {
+        'navigation': '20% 15% 1fr 20%' 
+      }
     }
   },
   plugins: [],
