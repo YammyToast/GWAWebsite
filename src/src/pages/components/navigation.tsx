@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import SearchBar from './search'
 
@@ -6,7 +7,6 @@ import SearchBar from './search'
 
 
 export default function Navigation() {
-    
     return (
         <>
             <div className="flex md:w-screen shadow justify-center items-center border-b bg-background border-background-alt fixed z-10">
@@ -16,7 +16,11 @@ export default function Navigation() {
                     <div className="flex w-full">
                         <SearchBar></SearchBar>
                     </div>
-                    <div className="flex items-center justify-center">Icon</div>
+                    <div className="flex items-center justify-center">
+                        <div className="flex cursor-pointer h-full w-fit hover:bg-accent-1 pl-8 pr-8">
+                            <Image src="/img/plus.svg" alt="New Post" width="20" height="20"></Image>
+                        </div>
+                    </div>
                 </div>
             </div>
             
