@@ -12,9 +12,10 @@ import Layout from "./layout";
 
 const Home: NextPage = () => {
   //const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const { data } = api.posts.getPost.useQuery()
 
   return (
-    <Layout>
+    <Layout title="Musecal - Browsing">
       <IndexContent></IndexContent>
     </Layout>
   );

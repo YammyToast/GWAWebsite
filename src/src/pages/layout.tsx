@@ -6,13 +6,14 @@ import Navigation from "./components/navigation";
 
 type LayoutContent = {
   children: React.ReactNode;
+  title: string
 };
 
 export default function Layout(props: LayoutContent) {
   return (
     <>
       <Head>
-        <title>Musecal - Browsing</title>
+        <title>{props.title}</title>
         <meta name="description" content="Musecal App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -17,7 +17,7 @@ export default function Navigation() {
                         <SearchBar></SearchBar>
                     </div>
                     <div className="flex items-center justify-center">
-                        <div className="flex cursor-pointer h-full w-fit hover:bg-accent-1 pl-8 pr-8">
+                        <div className="flex cursor-pointer h-full w-fit hover:bg-coral duration-200 pl-8 pr-8">
                             <Image src="/img/plus.svg" alt="New Post" width="20" height="20"></Image>
                         </div>
                     </div>
