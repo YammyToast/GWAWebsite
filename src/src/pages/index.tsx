@@ -25,18 +25,21 @@ export type ScrollerData = {
 
 
 const Home: NextPage = () => {
-  //const hello = api.example.hello.useQuery({ text: "from tRPC" });
-  const { data } = api.posts.getPost.useQuery()
+  const { data } = api.posts.getAllPosts.useQuery()
 
   let ScrollerData: ScrollerData = {
-    content: [{
-      title: data?.title,
-      thumbnailLink: "none",
-      id: (typeof (data?.id) == 'number') ? data.id : -1,
-      createdAt: data?.createdAt || new Date()
-    }],
-    length: 1
-  }
+    // Map Loaded data into array.
+    // Return Empty array if data structure is corrupted.
+    content: data?.map((item) => {
+      return {
+        title: item.title,
+        thumbnailLink: "none",
+        id: (typeof (item.id) == 'number') ? item.id : -1,
+        createdAt: item.createdAt || new Date()
+      }}) || [],
+      length: 1
+    }
+
 
   return (
     <Layout title="Musecal - Browsing">
