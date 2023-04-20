@@ -20,11 +20,10 @@ const Post: NextPage = () => {
     const router = useRouter()
     const params = (router.query.slug as string[]) || []
 
-    console.log(router.query.slug)
     if (params.length < 1 || !params[0]) { return <h1>ERROR</h1>}
-
     const { data } = api.posts.getPostByID.useQuery({ id: params[0] }) 
-    
+    if (!data) { return <h1>Couldn't Find Post</h1>}
+
     let content: PostContent = {
         id: data?.id || "-1",
         createdAt: data?.createdAt || new Date(),
