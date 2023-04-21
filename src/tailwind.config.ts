@@ -23,7 +23,8 @@ export default {
     },
     extend: {
       gridTemplateColumns: {
-        'navigation': '20% 20% 1fr 20%' 
+        'navigation': '20% 20% 1fr 20%',
+        'postBanner': '15% 55% 30%' 
       }
     }
   },

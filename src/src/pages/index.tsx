@@ -14,7 +14,7 @@ import Layout from "./layout";
 export type PostConfig = {
   title: string | undefined,
   thumbnailLink: string,
-  id: number,
+  id: string,
   createdAt: Date,
 }
 
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
       return {
         title: item.title,
         thumbnailLink: "none",
-        id: (typeof (item.id) == 'number') ? item.id : -1,
+        id: (typeof (item.id) == 'string') ? item.id : '-1',
         createdAt: item.createdAt || new Date()
       }}) || [],
       length: 1

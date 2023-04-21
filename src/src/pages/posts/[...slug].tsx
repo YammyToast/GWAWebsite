@@ -22,7 +22,7 @@ const Post: NextPage = () => {
 
     if (params.length < 1 || !params[0]) { return <h1>ERROR</h1>}
     const { data } = api.posts.getPostByID.useQuery({ id: params[0] }) 
-    if (!data) { return <h1>Couldn't Find Post</h1>}
+    if (!data) { return <h1>Couldn't Find Post</h1> }
 
     let content: PostContent = {
         id: data?.id || "-1",
@@ -30,6 +30,7 @@ const Post: NextPage = () => {
         title: data?.title || "Untitled",
         content: data?.content || "No Content"
     }
+    
     return (
         <Layout title="Musecal - Post">
             <PostContent content={content}></PostContent>

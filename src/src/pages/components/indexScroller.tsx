@@ -5,10 +5,8 @@ import { PostConfig, ScrollerData } from '../index'
 
 
 export default function IndexScroller(props: ScrollerData) {
-
     const posts: any = props.content.map((data) => 
         <ScrollerPostItem key={data.id} content={data}>
-
         </ScrollerPostItem>
 
     )
