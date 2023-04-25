@@ -24,7 +24,11 @@ export default {
     extend: {
       gridTemplateColumns: {
         'navigation': '20% 20% 1fr 20%',
-        'postBanner': '15% 55% 30%' 
+        'postBanner': '12% 1fr 30%',
+      },
+      gridTemplateRows: {
+        // 'postStack': '1fr 20%',
+
       }
     }
   },
