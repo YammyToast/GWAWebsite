@@ -17,7 +17,7 @@ export default function Layout(props: LayoutContent) {
         <meta name="description" content="Musecal App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden scrollbar scrollbar-thumb-accent-2 scrollbar-track-transparent">
         <Navigation></Navigation>
         <main>{props.children}</main>
       </div>

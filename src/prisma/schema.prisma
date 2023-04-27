@@ -18,6 +18,17 @@ model Post {
   content   String   @db.MediumText
 
   ContentReference ContentReference[]
+  OriginLink       PostLink[]         @relation("origin")
+  TargetLink       PostLink[]         @relation("target")
+}
+
+model PostLink {
+  origin   Post   @relation("origin", fields: [originID], references: [id])
+  originID String
+  target   Post   @relation("target", fields: [targetID], references: [id])
+  targetID String
+
+  @@id([originID, targetID])
 }
 
 model ContentReference {
